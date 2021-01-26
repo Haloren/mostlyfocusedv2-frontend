@@ -1,0 +1,31 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* COLOR PALETTE */
+:root {
+    --bg: rgb(70, 70, 70, 0.66);
+    --wh: rgb(235, 235, 235);
+    --blk: rgb(3, 11, 56);
+    --gry: rgb(70, 70, 70);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: var(--wh);
+}
+
+.background {
+  position: absolute;
+  z-index: -99;
+  height: 100%;
+  width: 100%;
+  /* background-image: url("./images/night3.jpg"); */
+  background-image: url('./images/day6.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--blk);
+  opacity: .96;
+}
