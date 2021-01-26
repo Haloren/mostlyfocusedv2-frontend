@@ -1,11 +1,12 @@
 import './App.css';
-import Home from './components/Home'
+import DateTime from './components/DateTime'
+import HomeContainer from './containers/HomeContainer';
 
 function App() {
   return (
     <>
       <div className="background"></div>
-      <Home />
+      <HomeContainer />
     </>
   );
 }

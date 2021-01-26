@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Clock from 'react-digital-clock';
 
-const Home = () => {
+const DateTime = () => {
 
     useEffect(() => {
         document.title = 'Mostly Focused'
@@ -25,4 +25,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default DateTime
