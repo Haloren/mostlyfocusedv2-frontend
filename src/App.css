@@ -47,3 +47,18 @@
   font-weight: bolder;
 }
 
+@media (max-width: 650px){
+  .date-time-container {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  .date {
+    font-size: 1rem;
+  }
+  .clock {
+    font-size: 3rem;
+  }
+}
