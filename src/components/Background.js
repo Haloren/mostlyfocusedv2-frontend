@@ -2,20 +2,32 @@ import React from 'react';
 
 const Background = () => {
     let picArray = [
-                "url(../images/day.jpg)",
-                "url(../images/day1.jpg)",
-                "url(../images/day2.jpg)",
-                "url(../images/day3.jpg)",
-                "url(../images/day4.jpg)",
-                "url(../images/day5.jpg)",
-                "url(../images/night.jpg)",
-                "url(../images/night1.jpg)",
-                "url(../images/night2.jpg)",
-                "url(../images/night3.jpg)"
+                "../images/day.jpg",
+                "../images/day1.jpg",
+                "../images/day2.jpg",
+                "../images/day3.jpg",
+                "../images/day4.jpg",
+                "../images/day5.jpg",
+                "../images/night.jpg",
+                "../images/night1.jpg",
+                "../images/night2.jpg",
+                "../images/night3.jpg"
                 ];
     let randomPic = picArray[Math.floor(Math.random()*picArray.length)];
     return (
-        <div className="background" style={{ backgroundImage: `${randomPic}` }} ></div>
+        <div style={{
+            position: 'absolute',
+            zIndex: '-99',
+            width: '100%',
+            height: '100%',
+            
+            backgroundImage: `url(${randomPic})`,
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundColor: '#000',
+            filter: 'brightness(.8)'
+        }} ></div>
     )
   }
 
