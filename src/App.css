@@ -26,13 +26,14 @@ li {
   z-index: -99;
   height: 100%;
   width: 100%;
-  /* background-image: url("./images/night3.jpg"); */
-  background-image: url('./images/day6.jpg');
+  /* background-image: url("./images/night.jpg"); */
+  background-image: url('./images/day.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--blk);
-  opacity: .96;
+  /* opacity: .9; */
+  filter: brightness(.8);
 }
 
 .date-time-container {
