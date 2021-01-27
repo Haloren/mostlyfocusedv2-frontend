@@ -5,29 +5,32 @@ const Help = () => {
     return (
         <>
             <Link className="back-btn" to={'/'}>Back</Link>
-            <h1 className="help-title">Help</h1>
             <div className="help-container">
-                <h3>Title goes here</h3>
-                <ol>
-                    <li></li>
-                    <li></li>
-                </ol>
+            <h1>Help</h1>
                 <br></br>
                 <hr></hr>
                 <br></br>
                 <h3>Title goes here</h3>
-                <ol>
-                    <li></li>
-                    <li></li>
-                </ol>
+                <ul>
+                    <li>Some text</li>
+                    <li>Some text</li>
+                </ul>
                 <br></br>
                 <hr></hr>
                 <br></br>
                 <h3>Title goes here</h3>
-                <ol>
-                    <li></li>
-                    <li></li>
-                </ol>
+                <ul>
+                    <li>Some text</li>
+                    <li>Some text</li>
+                </ul>
+                <br></br>
+                <hr></hr>
+                <br></br>
+                <h3>Title goes here</h3>
+                <ul>
+                    <li>Some text</li>
+                    <li>Some text</li>
+                </ul>
                 <br></br>
                 <hr></hr>
                 <br></br>

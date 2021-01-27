@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Clock from 'react-digital-clock';
+import { Link } from 'react-router-dom';
 
 const DateTime = () => {
 
@@ -16,12 +17,15 @@ const DateTime = () => {
     let year = today.getFullYear();
 
     return (
+        <>
         <div className="date-time-container">
             <h3 className="date">{day} {month} {date}, {year}</h3>
             <div className="clock">   
                 <Clock format={'hh-mm'} />
-            </div>
+            </div> 
         </div>
+        <Link to={'/help'} className="help-link">Help</Link>
+        </>
     )
 }
 

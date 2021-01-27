@@ -17,6 +17,10 @@
   text-shadow: 1px 1px var(--gry)
 }
 
+li {
+  list-style-type: none;
+}
+
 .background {
   position: absolute;
   z-index: -99;
@@ -47,6 +51,28 @@
   font-weight: bolder;
 }
 
+.help-container {
+  margin: auto;
+  width: 100%;
+  padding: 10%;
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.help-link, .back-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  text-decoration: none;
+}
+
 @media (max-width: 650px){
   .date-time-container {
     position: fixed;
@@ -61,15 +87,4 @@
   .clock {
     font-size: 3rem;
   }
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 10px;
-}
-
-.help {
-  left: 0;
 }
