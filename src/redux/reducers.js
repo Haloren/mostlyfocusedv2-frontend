@@ -4,8 +4,7 @@ const initialUserState = {
 
 const reducers = (state=initialUserState, action) => {
     // debugger;
-
-
+    return {...state}
 }
 
 export default reducers
