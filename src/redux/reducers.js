@@ -4,7 +4,12 @@ const initialUserState = {
 
 const reducers = (state=initialUserState, action) => {
     // debugger;
-    return {...state}
+    // switch (action.type){
+    //     case 'FETCH_USERS':
+    //         return {users: action.payload}
+
+    // default:
+        return {...state}
 }
 
 export default reducers

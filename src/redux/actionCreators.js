@@ -1,11 +1,14 @@
-const API = "http://loaclhost:3001"
+const API = "http://localhost:3001"
 
-// FETCH USER DATA
+// FETCH DATA FROM DATABASE
 export function fetchUsers() {
-    // debugger;
     return (dispatch) => {
         fetch(API + '/users')
         .then(resp => resp.json())
         .then(data => console.log(data))
+        // .then(users => dispatch({
+        //     type: 'FETCH_USERS',
+        //     payload: users
+        // }))
     }
 }

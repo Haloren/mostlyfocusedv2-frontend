@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Weather = (props) => {
-    // console.log("Weather", props)
+const UserData = (props) => {
+    console.log("UserData", props)
     return (
         <>
             <h5>Zip:</h5>
@@ -9,4 +9,4 @@ const Weather = (props) => {
     )
 }
 
-export default Weather 
+export default UserData
