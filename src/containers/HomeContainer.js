@@ -5,8 +5,7 @@ import { connect } from 'react-redux';
 import { fetchUsers } from '../redux/actionCreators';
 
 import Help from '../components/Help';
-import DateTime from '../components/DateTime';
-import UserData from '../components/UserData';
+import UsersData from '../components/UsersData';
 
 class HomeContainer extends React.Component {
 
@@ -20,10 +19,11 @@ class HomeContainer extends React.Component {
             <>
             <Switch>
                 <Route exact path='/help' component= { Help }></Route>
-                <Route path='/' component= { DateTime }></Route>
-                <Route path='/users' ></Route>
-                <Route path='/users/1' ></Route>
-                <Route path={['/', '/users', '/users/1']} component={ UserData } />
+                <Route 
+                    path={['/', '/users', '/users/1']} 
+                    render={(routerProps) => 
+                    <UsersData {...routerProps} users={this.props.users} />}>
+                </Route>
             </Switch>
             </>
         )
