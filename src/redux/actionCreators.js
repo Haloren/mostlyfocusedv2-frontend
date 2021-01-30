@@ -16,9 +16,10 @@ export function fetchWeather() {
     return (dispatch) => {
         fetch(API + '/users/1')
         .then(resp => resp.json())
-        .then(weather => dispatch({
-            type: 'FETCH_WEATHER',
-            payload: weather
-        }))
+        .then(data => console.log(data))
+        // .then(weather => dispatch({
+        //     type: 'FETCH_WEATHER',
+        //     payload: weather
+        // }))
     }
 }

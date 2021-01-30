@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import { connect } from 'react-redux';
-import { fetchWeather } from '../redux/actionCreators';
+import { fetchWeather, fetchUsers } from '../redux/actionCreators';
 
 import Help from '../components/Help';
 import UsersData from '../components/UsersData';
@@ -10,8 +10,9 @@ import UsersData from '../components/UsersData';
 class HomeContainer extends React.Component {
 
     componentDidMount() {
-        console.log("Home", this.props)
-        // this.props.fetchWeather()
+        // console.log("Home", this.props)
+        this.props.fetchWeather()
+        this.props.fetchUsers()
     }
 
     render() {
@@ -30,8 +31,9 @@ class HomeContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        weather: state.weather
+        weather: state.weather,
+        users: state.users
     }
 }
 
-export default connect(mapStateToProps, { fetchWeather })(HomeContainer);
+export default connect(mapStateToProps, { fetchWeather, fetchUsers })(HomeContainer);

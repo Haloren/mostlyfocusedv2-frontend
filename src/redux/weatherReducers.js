@@ -3,10 +3,10 @@ const initialUserState = {
 }
 
 const weatherReducers = (state=initialUserState, action) => {
-    // debugger;
+
     switch (action.type){
-        // case 'FETCH_WEATHER':
-        //     return {weather: action.payload}
+        case 'FETCH_WEATHER':
+            return {...state, weather: action.payload}
 
     default:
         return {...state}
