@@ -12,3 +12,13 @@ export function fetchUsers() {
         // }))
     }
 }
+export function fetchWeather() {
+    return (dispatch) => {
+        fetch(API + '/users/1')
+        .then(resp => resp.json())
+        .then(weather => dispatch({
+            type: 'FETCH_WEATHER',
+            payload: weather
+        }))
+    }
+}

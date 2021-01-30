@@ -1,16 +1,9 @@
-const initialUserState = {
-    users: []
-}
+import { combineReducers } from 'redux';
 
-const reducers = (state=initialUserState, action) => {
-    // debugger;
-    switch (action.type){
-        // case 'FETCH_USERS':
-        //     return {users: action.payload}
+import weatherReducers from './weatherReducers';
+import usersReducers from './usersReducers';
 
-    default:
-        return {...state}
-    }
-}
-
-export default reducers
+export default combineReducers({
+    users: usersReducers,
+    weather: weatherReducers
+}) 
