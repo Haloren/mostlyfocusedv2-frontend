@@ -19,8 +19,8 @@ class HomeContainer extends React.Component {
         return (
             <>
                 <DateTime />
-                <UsersData users={this.props.users}/>
-                <Weather weather={this.props.weather} />
+                <UsersData users={this.props.users.users}/>
+                <Weather weather={this.props.weather && this.props.weather.weather} />
             </>
         )
     }
