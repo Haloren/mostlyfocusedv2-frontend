@@ -1,10 +1,10 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 import { fetchWeather, fetchUsers } from '../redux/actionCreators';
 
-import Help from '../components/Help';
+import DateTime from '../components/DateTime';
+import Weather from '../components/Weather';
 import UsersData from '../components/UsersData';
 
 class HomeContainer extends React.Component {
@@ -17,14 +17,11 @@ class HomeContainer extends React.Component {
 
     render() {
         return (
-            <Switch>
-                <Route exact path='/help' component= { Help }></Route>
-                <Route 
-                    path={['/', '/users', '/users/1']} 
-                    render={(routerProps) => 
-                    <UsersData {...routerProps} users={this.props.users} />}>
-                </Route>
-            </Switch>
+            <>
+                <DateTime />
+                <UsersData users={this.props.users}/>
+                <Weather weather={this.props.weather} />
+            </>
         )
     }
 }

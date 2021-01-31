@@ -1,14 +1,11 @@
 import React from 'react';
 
-import DateTime from '../components/DateTime';
-
 const UsersData = (props) => {
-    // console.log("UsersData", props)
+    console.log("UsersData", props.users)
     
     return (
         <>
-            <DateTime />
-            <h5>Zip:</h5>
+            <h1>Hello </h1>
         </>
     )
 }
