@@ -20,7 +20,7 @@ class HomeContainer extends React.Component {
             <>
                 <DateTime />
                 <UsersData users={this.props.users.users}/>
-                <Weather weather={this.props.weather && this.props.weather.weather} />
+                <Weather weather={this.props.weather && this.props.weather.weather.results} />
             </>
         )
     }
