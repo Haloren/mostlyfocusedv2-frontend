@@ -20,7 +20,7 @@ const DateTime = () => {
         <>
         <div className="date-time-container">
             <h3 className="date">{day} {month} {date}, {year}</h3>
-            <div className="clock">   
+            <div className="clock" id="clock">   
                 <Clock format={'hh-mm'} />
             </div> 
         </div>
