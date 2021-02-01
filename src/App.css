@@ -51,7 +51,7 @@ li {
 .date-time-container {
   z-index: -1;
   position: fixed;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -62,6 +62,14 @@ li {
 .clock {
   font-size: 6em;
   font-weight: bolder;
+}
+
+.delete-btn {
+  color: red;
+}
+.delete-btn:hover {
+  color: var(--wh);
+  background-color: red;
 }
 
 .list-container {
