@@ -5,12 +5,13 @@ const Todos = (props) => {
     return (
         <div className="list-container todos">
             <h1> Todos List </h1>  
+            <hr></hr>
             <ul>
                 {props.user && props.user.todos.map(todo =>
                     <li key={todo.id} className="list-item">
-                        <input type="checkbox" className="checkbox"></input>
-                        {todo.item}
                         <button className="delete-btn"> X </button>
+                        <h4>{todo.item}</h4>
+                        <input type="checkbox" className="checkbox"></input>
                     </li>
                 )}
             </ul>
