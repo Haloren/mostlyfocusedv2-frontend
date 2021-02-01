@@ -6,7 +6,7 @@ import Events from '../components/Events';
 const UsersData = (props) => {
     // console.log("UsersData", props.users[0])
     
-    let user = props.users[0]
+    let user = props.users && props.users[0]
 
     return (
         <>

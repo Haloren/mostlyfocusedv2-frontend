@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Events = (props) => {
-    // console.log("Events", props.user.events)
+    // console.log("Events", props.user)
 
     return (
-        <div className="events-container">
+        <div className="list-container events">
            <h1> Upcoming Events </h1>
            <ul>
-               {props.user.events && props.user.events.map(event =>
+               {props.user && props.user.events.map(event =>
                     <li key={event.id} className="list-item">
                         <h3> {event.date} </h3>
                         <h3> {event.title} </h3>

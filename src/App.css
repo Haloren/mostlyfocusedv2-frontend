@@ -52,6 +52,26 @@ li {
   font-weight: bolder;
 }
 
+.list-container {
+  position: absolute;
+  bottom: 30px;
+  border-radius: 6px;
+  background-color: var(--bg);
+  padding: 0 20px;
+  margin: 20px;
+  overflow: auto;
+  height: 300px;
+  width: 400px;
+}
+
+.events {
+  left: 0;
+}
+
+.todos {
+  right: 0;
+}
+
 .help-container {
   margin: auto;
   width: 100%;
@@ -79,7 +99,7 @@ footer {
   .date-time-container {
     position: fixed;
     top: 10%;
-    left: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
     width: 100%;
   }
@@ -88,5 +108,16 @@ footer {
   }
   .clock {
     font-size: 3rem;
+  }
+
+  .list-container {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .events {
+    top: 75%;
+  }
+  .todos {
+    top: 35%;
   }
 }
