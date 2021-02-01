@@ -27,7 +27,7 @@ li {
   height: 100%;
   width: 100%;
   /* background-image: url("./images/night.jpg"); */
-  background-image: url('./images/day.jpg');
+  background-image: url('./images/background_images/day.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
