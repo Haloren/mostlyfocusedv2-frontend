@@ -22,3 +22,26 @@ export function fetchWeather() {
         }))
     }
 }
+
+// UPDATE DATA IN DATABASE
+export const updateZip = (zip) => {
+    
+    return (dispatch) => {
+        fetch(API + `/users/1`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(zip),
+        })
+        .then(resp => resp.json())
+        .then(user => {
+            if (user.message) {
+                alert(zip.message)
+            } else {
+                dispatch({type: 'UPDATE_ZIP', payload: user})
+            }
+        })
+    }
+}

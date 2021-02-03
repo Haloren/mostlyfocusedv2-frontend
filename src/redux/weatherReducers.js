@@ -8,8 +8,19 @@ const weatherReducers = (state=initialUserState, action) => {
         case 'FETCH_WEATHER':
             return {...state, weather: action.payload}
 
-    default:
-        return {...state}
+        case 'UPDATE_WEATHER':
+            debugger;
+            let userZipUpdate = state.users.map(user => {
+                if (user.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return user
+                }
+            })
+            return {...state, users: userZipUpdate}        
+
+        default:
+            return {...state}
     }
 }
 

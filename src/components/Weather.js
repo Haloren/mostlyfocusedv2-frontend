@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Weather = (props) => {
-    console.log("Weather", props.weather)
+    console.log("Weather", props)
 
     //API TEMP IS IN KELVIN CONVERT TO FAHRENHEIT & CELSIUS
     let fahrenheit = Math.round(((props.weather && props.weather.main.temp - 273.15)*9/5+32));
