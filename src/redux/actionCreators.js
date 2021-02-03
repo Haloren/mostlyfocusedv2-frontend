@@ -25,9 +25,8 @@ export function fetchWeather() {
 
 // UPDATE DATA IN DATABASE
 export const updateZip = (zip) => {
-    
     return (dispatch) => {
-        fetch(API + `/users/1`, {
+        fetch(API + `/users`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

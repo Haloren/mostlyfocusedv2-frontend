@@ -14,7 +14,7 @@ class WeatherUpdate extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        // debugger
+        debugger
         this.props.updateZip(this.state)
         this.setState({ zip: '' });
     }

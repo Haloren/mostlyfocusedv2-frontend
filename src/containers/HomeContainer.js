@@ -6,7 +6,6 @@ import { fetchWeather, fetchUsers } from '../redux/actionCreators';
 import DateTime from '../components/DateTime';
 import Weather from '../components/Weather';
 import UsersData from '../components/UsersData';
-import FormsContainer from '../containers/FormsContainer'
 
 class HomeContainer extends React.Component {
 
@@ -22,7 +21,6 @@ class HomeContainer extends React.Component {
                 <DateTime />
                 <UsersData users={this.props.users.users}/>
                 <Weather weather={this.props.weather && this.props.weather.weather.results} />
-                <FormsContainer users={this.props.users.users}/>
             </>
         )
     }
