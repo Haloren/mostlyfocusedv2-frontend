@@ -1,8 +1,15 @@
 import React from 'react';
 import TodoForm from './TodoForm';
 
+import { connect } from 'react-redux';
+import { deleteTodo } from '../redux/actionCreators';
+
 const Todos = (props) => {
     // console.log("Todos", props.user)
+    const handleOnDelete = (todo) => {
+        debugger;
+    }
+
     return (
         <div className="list-container todos">
             <TodoForm />
@@ -12,7 +19,7 @@ const Todos = (props) => {
             <ul>
                 {props.user && props.user.todos.map(todo =>
                     <li key={todo.id} className="list-item">
-                        <button className="delete-btn"> X </button>
+                        <button className="delete-btn" onClick={() => handleOnDelete(todo)}> X </button>
                         <h4>{todo.item}</h4>
                         <input type="checkbox" className="checkbox"></input>
                     </li>
@@ -22,4 +29,4 @@ const Todos = (props) => {
     )
 }
 
-export default (Todos)
+export default connect(null, { deleteTodo })(Todos)
