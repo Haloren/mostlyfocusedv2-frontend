@@ -66,3 +66,21 @@ export const updateZip = (zip) => {
         })
     }
 }
+
+//DELETE DATA FROM DATABASE
+export const deleteTodo = (todoId) => {
+    return (dispatch) => {
+        fetch(API + `/users/1/todos/${todoId}`, {
+            method: 'DELETE',
+            },
+        )
+        .then(resp => resp.json())
+        .then(user => {
+            if (user.message) {
+                alert(user.message)
+            } else {
+                dispatch({type: 'DELETE_TODO', payload: user})
+            }
+        })
+    }
+}

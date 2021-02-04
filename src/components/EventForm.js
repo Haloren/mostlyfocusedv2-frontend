@@ -8,7 +8,7 @@ class EventForm extends React.Component {
         return (
             <>
                 <form onSubmit={}>
-                    <input type="text" name="title" value={} onChange={} placeholder="Add an Event" required ></input>
+                    <input type="text" name="title" value={} onChange={} placeholder="Add Event" required ></input>
                     <input type="date" name="date" value={} onChange={} required ></input>
                     <input type="submit" value="+"></input>
                 </form>

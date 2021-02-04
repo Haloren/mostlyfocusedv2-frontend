@@ -1,9 +1,12 @@
 import React from 'react';
+import TodoForm from './TodoForm';
 
 const Todos = (props) => {
     // console.log("Todos", props.user)
     return (
         <div className="list-container todos">
+            <TodoForm />
+            <br></br>
             <h1> Todos List </h1>  
             <hr></hr>
             <ul>
@@ -14,7 +17,7 @@ const Todos = (props) => {
                         <input type="checkbox" className="checkbox"></input>
                     </li>
                 )}
-            </ul>
+            </ul>            
         </div>
     )
 }
