@@ -1,5 +1,6 @@
 import React from 'react';
 import WeatherUpdate from './WeatherUpdate';
+import '../WeatherIcons.css';
 
 const Weather = (props) => {
     console.log("Weather", props)
