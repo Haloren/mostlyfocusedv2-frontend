@@ -14,7 +14,7 @@ class WeatherUpdate extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        debugger
+        // debugger
         this.props.updateZip(this.state)
         this.setState({ zip: '' });
     }
@@ -23,7 +23,7 @@ class WeatherUpdate extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleOnSubmit}>
-                    <input type="text" name="zip" value={this.state.zip} onChange={this.handleOnChange} placeholder="Zip Code" required ></input>
+                    <input className="zip-input" type="number" name="zip" value={this.state.zip} onChange={this.handleOnChange} placeholder="Zip Code" minLength="5" maxLength="5" required ></input>
                     <input type="submit" value="Change"></input>
                 </form>
             </div>

@@ -23,10 +23,32 @@ export function fetchWeather() {
     }
 }
 
+// ADD DATA TO DATABASE
+export const addTodo = (todo) => {
+    return (dispatch) => {
+        fetch(API + `/users/1/todos`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(todo),
+        })
+        .then(resp => resp.json())
+        .then(user => {
+            if (user.message) {
+                alert(user.message)
+            } else {
+                dispatch({type: 'ADD_TODO', payload: user})
+            }
+        })
+    }
+}
+
 // UPDATE DATA IN DATABASE
 export const updateZip = (zip) => {
     return (dispatch) => {
-        fetch(API + `/users`, {
+        fetch(API + '/users/1', {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

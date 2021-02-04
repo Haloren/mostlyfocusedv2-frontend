@@ -38,14 +38,17 @@ li {
 
 .weather-container {
   position: absolute;
-  top: 30px;
+  top: 5%;
   right: 0;
-  border-radius: 6px;
-  padding: 0 20px;
-  margin: 20px;
-  overflow: auto;
-  height: 150px;
+  padding: 5px;
+  margin: 5px;
   width: 150px;
+  font-size: 1.2em;
+}
+
+.zip-input {
+  display: inline;
+  width: 80px;
 }
 
 .date-time-container {

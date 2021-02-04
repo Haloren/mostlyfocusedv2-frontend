@@ -1,4 +1,5 @@
 import React from 'react';
+import WeatherUpdate from './WeatherUpdate';
 
 const Weather = (props) => {
     console.log("Weather", props)
@@ -37,6 +38,7 @@ const Weather = (props) => {
 
     return (
         <div className="weather-container">
+            <WeatherUpdate />
             <h3>{weatherCondition} {fahrenheit}° F</h3>
             {/* <h3>{celsius}° C</h3> */}
             <h3>{props.weather && props.weather.name}</h3>
