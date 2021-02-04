@@ -1,10 +1,12 @@
 import React from 'react';
+import EventForm from './EventForm';
 
 const Events = (props) => {
     // console.log("Events", props.user)
 
     return (
         <div className="list-container events">
+            <EventForm />
            <h1> Upcoming Events </h1>
            <hr></hr>
            <ul>
