@@ -1,5 +1,4 @@
 import React from 'react';
-import TodoForm from './TodoForm';
 
 import { connect } from 'react-redux';
 import { deleteTodo } from '../redux/actionCreators';
@@ -12,7 +11,6 @@ const Todos = (props) => {
 
     return (
         <div className="list-container todos">
-            <TodoForm />
             <br></br>
             <h1> Todos List </h1>  
             <hr></hr>

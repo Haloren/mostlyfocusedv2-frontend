@@ -31,6 +31,16 @@ const usersReducers = (state=initialUserState, action) => {
             })
             return {...state, users: userTodoAdd}
 
+        case 'ADD_EVENT':
+            let userEventAdd = state.users.map(user => {
+                if (user.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return user
+                }
+            })
+            return {...state, users: userEventAdd}  
+
         case 'DELETE_TODO':
             debugger;
             let userTodoDelete = state.users.map(user => {
@@ -40,7 +50,7 @@ const usersReducers = (state=initialUserState, action) => {
                     return user
                 }
             })
-            return {...state, users: userTodoDelete}
+            return {...state, users: userTodoDelete}  
 
         default:
             return {...state}

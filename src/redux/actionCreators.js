@@ -47,9 +47,9 @@ export const updateUser = (zip, userId) => {
 }
 
 // ADD DATA TO DATABASE
-export const addTodo = (todo) => {
+export const addTodo = (todo, userId) => {
     return (dispatch) => {
-        fetch(API + '/users/1/todos', {
+        fetch(API + `/users/${userId}/todos`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -63,6 +63,26 @@ export const addTodo = (todo) => {
                 alert(user.message)
             } else {
                 dispatch({type: 'ADD_TODO', payload: user})
+            }
+        })
+    }
+}
+export const addEvent = (event, userId) => {
+    return (dispatch) => {
+        fetch(API + `/users/${userId}/events`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(event),
+        })
+        .then(resp => resp.json())
+        .then(user => {
+            if (user.message) {
+                alert(user.message)
+            } else {
+                dispatch({type: 'ADD_EVENT', payload: user})
             }
         })
     }
