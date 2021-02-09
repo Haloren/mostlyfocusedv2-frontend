@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateZip } from '../redux/actionCreators';
+import { updateUser } from '../redux/actionCreators';
 
 class WeatherUpdate extends React.Component {
 
@@ -14,8 +14,8 @@ class WeatherUpdate extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        // debugger
-        this.props.updateZip(this.state)
+        // debugger;
+        this.props.updateUser(this.state, this.props.user.id)
         this.setState({ zip: '' });
     }
 
@@ -31,4 +31,4 @@ class WeatherUpdate extends React.Component {
     }
 }
 
-export default connect(null, { updateZip })(WeatherUpdate)
+export default connect(null, { updateUser })(WeatherUpdate)

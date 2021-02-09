@@ -23,6 +23,29 @@ export function fetchWeather() {
     }
 }
 
+// UPDATE DATA IN DATABASE
+export const updateUser = (zip) => {
+    // debugger;
+    return (dispatch) => {
+        fetch(API + `/users/1`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(zip),
+        })
+        .then(resp => resp.json())
+        .then(user => {
+            if (user.message) {
+                alert(user.message)
+            } else {
+                dispatch({type: 'UPDATE_USER', payload: user})
+            }
+        })
+    }
+}
+
 // ADD DATA TO DATABASE
 export const addTodo = (todo) => {
     return (dispatch) => {
@@ -40,28 +63,6 @@ export const addTodo = (todo) => {
                 alert(user.message)
             } else {
                 dispatch({type: 'ADD_TODO', payload: user})
-            }
-        })
-    }
-}
-
-// UPDATE DATA IN DATABASE
-export const updateZip = (zip) => {
-    return (dispatch) => {
-        fetch(API + '/users/1', {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(zip),
-        })
-        .then(resp => resp.json())
-        .then(user => {
-            if (user.message) {
-                alert(zip.message)
-            } else {
-                dispatch({type: 'UPDATE_ZIP', payload: user})
             }
         })
     }

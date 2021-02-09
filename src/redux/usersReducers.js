@@ -9,6 +9,16 @@ const usersReducers = (state=initialUserState, action) => {
         case 'FETCH_USERS':
             return {users: action.payload}
 
+        case 'UPDATE_USER':
+            let userUpdate = state.users.map(user => {
+                if (user.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return user
+                }
+            })
+            return {...state, users: userUpdate}
+
         case 'ADD_TODO':
             // debugger;
             let userTodoAdd = state.users.map(user => {
