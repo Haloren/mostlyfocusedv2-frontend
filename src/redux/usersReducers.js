@@ -10,7 +10,7 @@ const usersReducers = (state=initialUserState, action) => {
             return {users: action.payload}
 
         case 'ADD_TODO':
-            debugger;
+            // debugger;
             let userTodoAdd = state.users.map(user => {
                 if (user.id === action.payload.id) {
                     return action.payload

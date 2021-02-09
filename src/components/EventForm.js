@@ -5,14 +5,16 @@ class EventForm extends React.Component {
     state = { title: '', date: '' }
 
     handleOnChange = (event) => {
-        debugger;
+        this.setState({
+            [event.target.name]: event.target.value
+        })
     }
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        debugger
+        // debugger
 
-        this.setState({title: '', date: ''});
+        // this.setState({title: '', date: ''});
     }
 
     render() {

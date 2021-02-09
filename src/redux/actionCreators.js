@@ -26,7 +26,7 @@ export function fetchWeather() {
 // ADD DATA TO DATABASE
 export const addTodo = (todo) => {
     return (dispatch) => {
-        fetch(API + `/users/1/todos`, {
+        fetch(API + '/users/1/todos', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

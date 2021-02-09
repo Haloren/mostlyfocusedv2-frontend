@@ -7,13 +7,15 @@ class TodoForm extends React.Component {
     state = { item: '' }
 
     handleOnChange = (event) => {
-        
+        this.setState({
+            item: event.target.value
+        })
     }
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        debugger
-        // this.props.addTodo(this.state, this.props.user.id)
+        // debugger;
+        this.props.addTodo(this.state)
         this.setState({ item: ''});
     }
 
