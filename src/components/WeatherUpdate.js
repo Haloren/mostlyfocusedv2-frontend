@@ -15,7 +15,7 @@ class WeatherUpdate extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault();
         // debugger;
-        this.props.updateUser(this.state, this.props.user.id)
+        this.props.updateUser(this.state, this.props.user.id);
         this.setState({ zip: '' });
     }
 

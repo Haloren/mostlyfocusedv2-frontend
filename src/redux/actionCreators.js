@@ -24,10 +24,10 @@ export function fetchWeather() {
 }
 
 // UPDATE DATA IN DATABASE
-export const updateUser = (zip) => {
+export const updateUser = (zip, userId) => {
     // debugger;
     return (dispatch) => {
-        fetch(API + `/users/1`, {
+        fetch(API + `/users/${userId}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

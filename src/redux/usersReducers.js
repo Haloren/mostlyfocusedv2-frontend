@@ -10,8 +10,9 @@ const usersReducers = (state=initialUserState, action) => {
             return {users: action.payload}
 
         case 'UPDATE_USER':
+            // debugger;
             let userUpdate = state.users.map(user => {
-                if (user.id === action.payload.id) {
+                if (user.id == action.payload.id) {
                     return action.payload
                 } else {
                     return user
