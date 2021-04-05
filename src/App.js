@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
-// import Background from './components/Background';
+import Background from './components/Background';
 
 import Help from './components/Help';
 // import WeatherUpdate from './components/WeatherUpdate';
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <div className="background"></div>
-      {/* <Background /> */}
+      <Background />
       <Switch>
         <Route exact path={'/help'} component= { Help }></Route>
         <Route path={['/', '/users', '/users/1']} component= { HomeContainer }></Route>

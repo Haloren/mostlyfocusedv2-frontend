@@ -16,7 +16,7 @@ class WeatherUpdate extends React.Component {
         event.preventDefault();
         // debugger;
         this.props.updateUser(this.state, this.props.user.id);
-        //send a fetch to get the and update the weather
+        //send a fetch to get and update the weather
         this.setState({ zip: '' });
     }
 
