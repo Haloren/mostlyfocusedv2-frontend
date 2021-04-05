@@ -6,7 +6,8 @@ import { deleteTodo } from '../redux/actionCreators';
 const Todos = (props) => {
     // console.log("Todos", props.user)
     const handleOnDelete = (todo) => {
-        debugger;
+        // debugger;
+        props.deleteTodo(todo.id, todo.user_id )
     }
 
     return (

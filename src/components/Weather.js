@@ -1,8 +1,7 @@
 import React from 'react';
-import '../WeatherIcons.css';
 
 const Weather = (props) => {
-    console.log("Weather", props)
+    // console.log("Weather", props)
 
     //API TEMP IS IN KELVIN CONVERT TO FAHRENHEIT & CELSIUS
     let fahrenheit = Math.round(((props.weather && props.weather.main.temp - 273.15)*9/5+32));
@@ -10,6 +9,7 @@ const Weather = (props) => {
 
     const hours = new Date().getHours();
     const dayTime = hours > 6 && hours < 18 ? 'day' : 'night';
+    const randomNumber = Math.floor(Math.random() * 13)
 
     let weatherCondition = props.weather && props.weather.weather[0].main;
     // console.log("weatherCondition", weatherCondition)
@@ -41,6 +41,7 @@ const Weather = (props) => {
             <h3>{weatherCondition} {fahrenheit}° F</h3>
             {/* <h3>{celsius}° C</h3> */}
             <h3>{props.weather && props.weather.name}</h3>
+            {/* dayTime === 'day' ? document.body.style.backgroundImage = "url('../images/background_images/day"+randomNumber+".jpg')" : document.body.style.backgroundImage = "url('../images/background_images/night"+randomNumber+".jpg')"; */}
         </div>
     )
 }

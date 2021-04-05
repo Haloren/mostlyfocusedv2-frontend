@@ -42,7 +42,7 @@ const usersReducers = (state=initialUserState, action) => {
             return {...state, users: userEventAdd}  
 
         case 'DELETE_TODO':
-            debugger;
+            // debugger;
             let userTodoDelete = state.users.map(user => {
                 if (user.id === action.payload.id) {
                     return action.payload

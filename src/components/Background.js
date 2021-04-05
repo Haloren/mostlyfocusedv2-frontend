@@ -2,16 +2,16 @@ import React from 'react';
 
 const Background = () => {
     let picArray = [
-                "../images/day.jpg",
-                "../images/day1.jpg",
-                "../images/day2.jpg",
-                "../images/day3.jpg",
-                "../images/day4.jpg",
-                "../images/day5.jpg",
-                "../images/night.jpg",
-                "../images/night1.jpg",
-                "../images/night2.jpg",
-                "../images/night3.jpg"
+                "../images/background_images/day.jpg",
+                "../images/background_images/day1.jpg",
+                "../images/background_images/day2.jpg",
+                "../images/background_images/day3.jpg",
+                "../images/background_images/day4.jpg",
+                "../images/background_images/day5.jpg",
+                "../images/background_images/night.jpg",
+                "../images/background_images/night1.jpg",
+                "../images/background_images/night2.jpg",
+                "../images/background_images/night3.jpg"
                 ];
     let randomPic = picArray[Math.floor(Math.random()*picArray.length)];
     return (

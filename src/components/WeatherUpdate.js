@@ -16,6 +16,7 @@ class WeatherUpdate extends React.Component {
         event.preventDefault();
         // debugger;
         this.props.updateUser(this.state, this.props.user.id);
+        //send a fetch to get the and update the weather
         this.setState({ zip: '' });
     }
 
@@ -30,5 +31,7 @@ class WeatherUpdate extends React.Component {
         )
     }
 }
+
+// WeatherUpdate.defaultProps = { zip: '93012' }
 
 export default connect(null, { updateUser })(WeatherUpdate)
