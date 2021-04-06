@@ -8,6 +8,10 @@ const weatherReducers = (state=initialUserState, action) => {
         case 'FETCH_WEATHER':
             return {...state, weather: action.payload}        
 
+        case 'UPDATE_USER':
+            debugger
+            return {...state, weather: action.payload.weather }
+
         default:
             return {...state}
     }

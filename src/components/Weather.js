@@ -1,11 +1,8 @@
 import React from 'react';
+// import ClearDay from '../images/weather_icons/ClearDay.png';
 
 const Weather = (props) => {
     // console.log("Weather", props)
-
-    //API TEMP IS IN KELVIN CONVERT TO FAHRENHEIT & CELSIUS
-    let fahrenheit = Math.round(((props.weather && props.weather.main.temp - 273.15)*9/5+32));
-    // let celsius = Math.round((props.weather && props.weather.main.temp - 273.15));
 
     const hours = new Date().getHours();
     const dayTime = hours > 6 && hours < 18 ? 'day' : 'night';
@@ -35,9 +32,18 @@ const Weather = (props) => {
             weatherCondition = '🌫️';
     }
 
+    //API TEMP IS IN KELVIN CONVERT TO FAHRENHEIT & CELSIUS
+    let fahrenheit = Math.round(((props.weather && props.weather.main.temp - 273.15)*9/5+32));
+    let celsius = Math.round((props.weather && props.weather.main.temp - 273.15));
+    
+    const toggleTemp = () => {
+        
+    }
+
     return (
         <div className="weather-container">
-            <h3>{weatherCondition} {fahrenheit}° F</h3>
+            {/* <img src={ClearDay} alt="" /> */}
+            <h3 onClick={toggleTemp}>{weatherCondition} {fahrenheit}° F</h3>
             {/* <h3>{celsius}° C</h3> */}
             <h3>{props.weather && props.weather.name}</h3>
         </div>

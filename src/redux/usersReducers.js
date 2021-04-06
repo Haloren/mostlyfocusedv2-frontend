@@ -13,7 +13,7 @@ const usersReducers = (state=initialUserState, action) => {
             // debugger;
             let userUpdate = state.users.map(user => {
                 if (user.id == action.payload.id) {
-                    return action.payload
+                    return action.payload.user
                 } else {
                     return user
                 }

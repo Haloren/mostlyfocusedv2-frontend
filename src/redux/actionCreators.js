@@ -36,11 +36,11 @@ export const updateUser = (zip, userId) => {
             body: JSON.stringify(zip),
         })
         .then(resp => resp.json())
-        .then(user => {
-            if (user.message) {
-                alert(user.message)
+        .then(resp => {
+            if (resp.message) {
+                alert(resp.message)
             } else {
-                dispatch({type: 'UPDATE_USER', payload: user})
+                dispatch({type: 'UPDATE_USER', payload: resp})
             }
         })
     }
