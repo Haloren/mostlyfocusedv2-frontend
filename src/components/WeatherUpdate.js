@@ -20,13 +20,19 @@ class WeatherUpdate extends React.Component {
         this.setState({ zip: '' });
     }
 
+    onClick = () => {
+
+    }
+
     render() {
         return (
             <div>
+                <div className="zip-container">
                 <form onSubmit={this.handleOnSubmit}>
                     <input className="zip-input" type="number" name="zip" value={this.state.zip} onChange={this.handleOnChange} placeholder="Zip Code" minLength="5" maxLength="5" required ></input>
-                    <input type="submit" value="Change"></input>
+                    <input style={{ cursor: 'pointer' }} type="submit" value=" + "></input>
                 </form>
+                </div>
             </div>
         )
     }
