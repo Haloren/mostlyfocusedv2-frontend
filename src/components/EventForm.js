@@ -22,10 +22,10 @@ class EventForm extends React.Component {
     render() {
         return (
             <>
-                <form onSubmit={this.handleOnSubmit}>
+                <form className="event-input event" onSubmit={this.handleOnSubmit}>
                     <input type="text" name="title" value={this.state.title} onChange={this.handleOnChange} placeholder="Add Event" required ></input>
                     <input type="date" name="date" value={this.state.date} onChange={this.handleOnChange} required ></input>
-                    <input type="submit" value="+"></input>
+                    <input style={{ cursor: 'pointer' }} type="submit" value=" + "></input>
                 </form>
             </>
         )

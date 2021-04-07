@@ -12,7 +12,7 @@ const Events = (props) => {
                     <li key={event.id} className="list-item">
                         <button className="delete-btn">X</button>
                         <h4> {event.title} </h4>
-                        <h3> {(event.date).slice(5,10)} </h3>
+                        <h4> {(event.date).slice(5,10)} </h4>
                     </li>
                 )}
            </ul>

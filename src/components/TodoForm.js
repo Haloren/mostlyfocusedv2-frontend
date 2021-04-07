@@ -22,9 +22,9 @@ class TodoForm extends React.Component {
     render() {
         return (
             <>
-                <form onSubmit={this.handleOnSubmit}>
+                <form className="todos-input todos" onSubmit={this.handleOnSubmit}>
                     <input type="text" name="item" value={this.state.item} onChange={this.handleOnChange} placeholder="Add Todo" required ></input>
-                    <input type="submit" value="+"></input>
+                    <input style={{ cursor: 'pointer' }} type="submit" value=" + "></input>
                 </form>
             </>
         )

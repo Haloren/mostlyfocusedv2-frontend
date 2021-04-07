@@ -12,7 +12,6 @@ const Todos = (props) => {
 
     return (
         <div className="list-container todos">
-            <br></br>
             <h1> Todos List </h1>  
             <hr></hr>
             <ul>

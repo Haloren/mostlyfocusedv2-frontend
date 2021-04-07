@@ -17,6 +17,21 @@
   text-shadow: 1px 1px var(--gry)
 }
 
+input {
+  border-radius: 5px;
+  padding: 5px;
+  background: var(--bg);
+  color: var(--wh);
+  text-shadow: none;
+}
+input::placeholder {
+  color: var(--wh);
+}
+input:hover {
+  background: var(--wh);
+  color: var(--blk);
+}
+
 li {
   /* list-style-type: none; */
   text-align: left;
@@ -127,13 +142,38 @@ h4.list-item {
   font-size: .75rem;
 }
 
-.events {
+.event-input {
+  z-index: 1;
+  position: absolute;
+  bottom: 325px;
+  border-radius: 6px;
+  padding: 0 20px;
+  margin: 20px;
+  overflow: auto;
+  text-align: left;
+  height: 40px;
+  width: 450px;
+}
+.event {
   left: 0;
 }
 
+.todos-input {
+  z-index: 1;
+  position: absolute;
+  bottom: 325px;
+  border-radius: 6px;
+  padding: 0 20px;
+  margin: 20px;
+  overflow: auto;
+  text-align: left;
+  height: 40px;
+  width: 400px;
+}
 .todos {
   right: 0;
 }
+
 
 .checkbox {
   position: relative;
@@ -196,8 +236,19 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .event-input {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   .events {
     top: 75%;
+  }
+  .todos-input {
+    position: absolute;
+    height: 380px;
+    left: 45%;
+    transform: translate(-50%, -50%);
   }
   .todos {
     top: 35%;
