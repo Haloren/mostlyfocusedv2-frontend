@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import ClearDay from '../images/weather_icons/ClearDay.png';
 
 const Weather = (props) => {
@@ -36,15 +36,19 @@ const Weather = (props) => {
     let fahrenheit = Math.round(((props.weather && props.weather.main.temp - 273.15)*9/5+32));
     let celsius = Math.round((props.weather && props.weather.main.temp - 273.15));
     
-    const toggleTemp = () => {
-        
-    }
-
+    const [textToggle, textToggleState] = useState(true)  
+    
+    // °
+    // style={{ cursor: 'pointer' }}?
     return (
         <div className="weather-container">
             {/* <img src={ClearDay} alt="" /> */}
-            <h3 onClick={toggleTemp}>{weatherCondition} {fahrenheit}° F</h3>
-            {/* <h3>{celsius}° C</h3> */}
+            { textToggle ? 
+                <h3 style={{ cursor: 'pointer' }} onClick={ () => textToggleState(!textToggle)}>{weatherCondition} {fahrenheit} °F</h3>
+                :
+                <h3 style={{ cursor: 'pointer' }} onClick={ () => textToggleState(!textToggle)}>{weatherCondition} {celsius} °C</h3>
+            }
+            
             <h3>{props.weather && props.weather.name}</h3>
         </div>
     )
