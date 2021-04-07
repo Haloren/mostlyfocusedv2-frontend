@@ -52,6 +52,17 @@ const usersReducers = (state=initialUserState, action) => {
             })
             return {...state, users: userTodoDelete}  
 
+        case 'DELETE_EVENT':
+            // debugger;
+            let userEventDelete = state.users.map(user => {
+                if (user.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return user
+                }
+            })
+            return {...state, users: userEventDelete} 
+
         default:
             return {...state}
     }

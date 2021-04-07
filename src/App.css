@@ -4,8 +4,9 @@
 :root {
     --bg: rgb(70, 70, 70, 0.66);
     --wh: rgb(235, 235, 235);
-    --blk: rgb(3, 11, 56);
+    --blk: rgb(3, 10, 55);
     --gry: rgb(70, 70, 70);
+    --red: rgb(165, 25, 25);
 }
 
 * {
@@ -30,6 +31,10 @@ input::placeholder {
 input:hover {
   background: var(--wh);
   color: var(--blk);
+}
+
+button {
+  outline: none;
 }
 
 li {
@@ -109,13 +114,33 @@ input::-webkit-inner-spin-button {
 }
 
 .delete-btn {
-  color: red;
-  height: 40px;
-  width: 40px;
+  color: var(--red);
+  height: 35px;
+  width: 35px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  text-shadow: none;
 }
 .delete-btn:hover {
   color: var(--wh);
-  background-color: red;
+  font-weight: bolder;
+  background-color: var(--red);
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 15px var(--wh); 
+  border-radius: 0px 6px 6px 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 212, 212, 0.4);
+  border-radius: 0px 6px 6px 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 212, 212, 0.6); 
 }
 
 .list-container {
@@ -132,15 +157,13 @@ input::-webkit-inner-spin-button {
 }
 .list-item {
   display: grid;
+  place-items: center;
   grid-template-columns: 10% 75% 15%;
   grid-template-rows: 40px;
   list-style: none;
   padding: 5px;
-  text-align: center;
-}
-h4.list-item {
-  height: 1rem;
-  font-size: .75rem;
+  font-size: 1rem;
+  overflow: hidden;
 }
 
 .event-input {
@@ -160,7 +183,6 @@ h4.list-item {
 }
 
 .todos-input {
-  z-index: 1;
   position: absolute;
   bottom: 325px;
   border-radius: 6px;
@@ -175,13 +197,12 @@ h4.list-item {
   right: 0;
 }
 
-
-.checkbox {
+/* .checkbox {
   position: relative;
   vertical-align: middle;
   bottom: -.75rem;
   transform: scale(2.5);
-}
+} */
 
 .help-container {
   z-index: -5;
@@ -236,17 +257,20 @@ footer {
   .weather-container {
     position: fixed;
     top: 40px;
+    right: -8%;
   }
 
   .zip-container {
     position: fixed;
     top: 120px;
+    right: -8%;
   }
 
   .list-container {
     left: 48%;
     transform: translate(-50%, -50%);
   }
+
   .event-input {
     position: absolute;
     left: 50%;
@@ -256,6 +280,7 @@ footer {
     top: 75%;
   }
   .todos-input {
+    z-index: -1;
     position: absolute;
     height: 380px;
     left: 47%;

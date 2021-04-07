@@ -105,3 +105,19 @@ export const deleteTodo = (todoId) => {
         })
     }
 }
+export const deleteEvent = (eventId) => {
+    return (dispatch) => {
+        fetch(API + `/users/1/events/${eventId}`, {
+            method: 'DELETE',
+            },
+        )
+        .then(resp => resp.json())
+        .then(user => {
+            if (user.message) {
+                alert(user.message)
+            } else {
+                dispatch({type: 'DELETE_EVENT', payload: user})
+            }
+        })
+    }
+}
