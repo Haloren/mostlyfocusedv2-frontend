@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 // import ClearDay from '../images/weather_icons/ClearDay.png';
 
 const Weather = (props) => {
@@ -38,8 +39,6 @@ const Weather = (props) => {
     
     const [textToggle, textToggleState] = useState(true)  
     
-    // °
-    // style={{ cursor: 'pointer' }}?
     return (
         <div className="weather-container">
             {/* <img src={ClearDay} alt="" /> */}

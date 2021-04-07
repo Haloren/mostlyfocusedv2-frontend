@@ -18,7 +18,8 @@
 }
 
 li {
-  list-style-type: none;
+  /* list-style-type: none; */
+  text-align: left;
 }
 
 .login-btn {
@@ -109,6 +110,7 @@ input::-webkit-inner-spin-button {
   grid-template-rows: 40px;
   list-style: none;
   padding: 5px;
+  text-align: center;
 }
 h4.list-item {
   height: 1rem;

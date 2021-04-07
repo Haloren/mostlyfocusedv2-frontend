@@ -14,9 +14,9 @@ function App() {
       <div className="background"></div>
       <Background />
       <Switch>
-        <Route exact path={'/login'} component= { Login }></Route>
+        <Route exact path={['/', '/login']} component= { Login }></Route>
         <Route exact path={'/help'} component= { Help }></Route>
-        <Route path={['/', '/users', '/users/1']} component= { HomeContainer }></Route>
+        <Route path={['/users', '/users/1']} component= { HomeContainer }></Route>
         {/* <Route path={'/zip'} component= { WeatherUpdate }></Route> */}
       </Switch>
       
