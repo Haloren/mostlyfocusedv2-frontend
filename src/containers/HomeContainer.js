@@ -2,6 +2,7 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 import { fetchWeather, fetchUsers } from '../redux/actionCreators';
+import { Link } from 'react-router-dom';
 
 import DateTime from '../components/DateTime';
 import Weather from '../components/Weather';
@@ -21,6 +22,7 @@ class HomeContainer extends React.Component {
                 <DateTime />
                 <UsersData users={this.props.users.users}/>
                 <Weather weather={this.props.weather && this.props.weather.weather.results} />
+                <Link className="logout-btn" to={'/login'}>Log Out</Link>
             </>
         )
     }

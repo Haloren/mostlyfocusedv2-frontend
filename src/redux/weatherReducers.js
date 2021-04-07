@@ -9,7 +9,7 @@ const weatherReducers = (state=initialUserState, action) => {
             return {...state, weather: action.payload}        
 
         case 'UPDATE_USER':
-            debugger
+            // debugger
             return {...state, weather: action.payload.weather }
 
         default:

@@ -19,6 +19,7 @@ function App() {
         <Route path={['/', '/users', '/users/1']} component= { HomeContainer }></Route>
         {/* <Route path={'/zip'} component= { WeatherUpdate }></Route> */}
       </Switch>
+      
       <footer><small> &copy;2021 Mostly Focused </small></footer>
     </>
   );

@@ -144,13 +144,19 @@ footer {
   margin: 10px;
 }
 
-.help-link, .back-btn {
+.help-link, .back-btn, .logout-btn {
   position: absolute;
   bottom: 0;
   left: 0;
   margin: 10px;
+  padding: 5px 10px;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--wh);
+  border-radius: 10px;
+}
+.logout-btn {
+  left: 4rem;
 }
 
 @media (max-width: 850px){

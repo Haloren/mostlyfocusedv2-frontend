@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Help = () => {
     return (
         <>
-            <Link className="back-btn" to={'/'}>Back</Link>
+            <Link className="back-btn" to={'/users/1'}>Back</Link>
             <div className="help-container">
             <h1>Help</h1>
                 <br></br>
