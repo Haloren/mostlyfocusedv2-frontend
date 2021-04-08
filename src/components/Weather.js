@@ -53,12 +53,12 @@ const Weather = (props) => {
             {/* <img src={ClearDay} alt="" /> */}
             { textToggle ? 
                 <h3 style={{ cursor: 'pointer' }} onClick={ () => textToggleState(!textToggle)}>
-                    <img class="weather-icon" src={weatherCondition} alt={props.weather && props.weather.weather[0].main}></img> 
+                    <img className="weather-icon" src={weatherCondition} alt={props.weather && props.weather.weather[0].main}></img> 
                 {fahrenheit} °F
                 </h3>
                 :
                 <h3 style={{ cursor: 'pointer' }} onClick={ () => textToggleState(!textToggle)}>
-                    <img class="weather-icon" src={weatherCondition} alt={props.weather && props.weather.weather[0].main}></img> 
+                    <img className="weather-icon" src={weatherCondition} alt={props.weather && props.weather.weather[0].main}></img> 
                 {celsius} °C
                 </h3>
             }

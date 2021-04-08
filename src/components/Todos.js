@@ -19,7 +19,7 @@ const Todos = (props) => {
                     <li key={todo.id} className="list-item">
                         <button className="delete-btn" onClick={() => handleOnDelete(todo)}> X </button>
                         <h4>{todo.item}</h4>
-                        {/* <input type="checkbox" className="checkbox"></input> */}
+                        <input type="checkbox" className="checkbox"></input>
                     </li>
                 )}
             </ul>            
