@@ -38,7 +38,7 @@ const Help = () => {
                 <h3>Weather</h3>
                 <ul>
                     <li>Change from Fahrenheit to Celsius by clicking on the displayed temperature</li>
-                    <li>Change the City by clicking on the city name and entering the zip code</li>
+                    <li>Change the City by entering a zip code and click the "+"</li>
                 </ul>
                 <br></br>
                 <hr></hr>
