@@ -79,6 +79,15 @@ li {
   font-size: 1.2em;
 }
 
+.weather-icon {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 50px;
+  width: 50px;
+}
+
 .zip-container {
   display: inline-block;
   z-index: 1;
