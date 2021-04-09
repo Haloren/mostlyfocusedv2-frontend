@@ -25,12 +25,12 @@ input {
   color: var(--wh);
   text-shadow: none;
 }
-input::placeholder {
-  color: var(--wh);
-}
 input:hover {
   background: var(--wh);
   color: var(--blk);
+}
+input::placeholder {
+  color: rgb(195, 195, 195);
 }
 
 button {
