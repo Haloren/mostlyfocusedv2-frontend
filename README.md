@@ -1,7 +1,7 @@
 # IMPORTANT!
 This project is the front-end to work along with the Rails backend found here:
 ### https://github.com/Haloren/mostlyfocusedv2-backend
-### To start clone the rails backend listed above and run it using port 3001
+### To start clone the rails backend (https://github.com/Haloren/mostlyfocusedv2-backend) and run the rails server using port 3001
 - Run the following command in your terminal: `rails s -p 3001` 
 
 ## Once the Rails Backend server is running you can clone and start the App
@@ -10,6 +10,7 @@ This project is the front-end to work along with the Rails backend found here:
 The app will open [http://localhost:3000](http://localhost:3000) in your browser.  
 <br />
 <br />
+
 # How to Use this App
 ## Help keep yourself mostly focused by setting this as your home page, that way everytime you open a new tab or winodw you'll be reminded of current Todos and upcoming Events.
 - Add and Delete Todos and Events
