@@ -282,6 +282,7 @@ footer {
   .event-input {
     position: absolute;
     left: 50%;
+    top: 61%;
     transform: translate(-50%, -50%);
   }
   .events {
